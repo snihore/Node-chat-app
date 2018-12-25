@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js//jquery331.js"></script>
     <title>Chat App</title>
 </head>
 <body>
-    <p>Welcome to Node Chat APP.</p>
+    <h3>Welcome to Node Chat App</h3>
+
+    <ol id="msg_list">
+
+    </ol>
+
+    <form id="chat_form">
+        <input type="text" name="message" id="message" placeholder="Type Message"/>
+        <button id="send_btn">Send</button>
+    </form>
+
+    <button id="location_send_btn">Send location</button>
+
 
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
-        socket.on('connect', function(){
-            console.log('New Client is connected to server.');
-        });
-        socket.on('disconnect', function(){
-            console.log('Disconnect from server.');
-        });
-
-        socket.on('readMessage', function(message){
-            console.log('Read Message:\n', message);
-        });
-
-    </script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
